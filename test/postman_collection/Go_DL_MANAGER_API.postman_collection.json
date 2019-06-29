@@ -1,0 +1,87 @@
+{
+	"info": {
+		"_postman_id": "ad212e7c-6832-4516-9cfd-cac8e774fac4",
+		"name": "Go_DL_MANAGER_API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "request with valid params",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "bfbfb817-c77c-4026-99d4-5c6122589177",
+						"exec": [
+							"tests[\"STATUS CODE IS 200\"] = responseCode.code == 200;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"url\": \"http://localhost:8080/data.txt\",\n\t\"threads\": 4\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "request with invalid params",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "eb31fc31-f48b-4923-b27f-97c996e249d4",
+						"exec": [
+							"tests[\"STATUS CODE IS 200\"] = responseCode.code == 200;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"url\": \"http://localhost:8080/random_file.txt\",\n\t\"threads\": 4\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000"
+				}
+			},
+			"response": []
+		}
+	]
+}
