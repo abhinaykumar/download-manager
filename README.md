@@ -4,6 +4,9 @@ Second is stats('/stats') API, this page return stats such as uniquq IPs, Server
 latency etc.
 
 <!-- Getting started -->
+<!-- To install the dependencies -->
+$ bash bin/setup
+
 <!-- Installing dependencies -->
 $ go get -u github.com/gorilla/mux
 
@@ -14,4 +17,4 @@ $ go build main.go
 $ ./main
 
 <!-- Run test case -->
-$ go test ./...
+$ go test -v

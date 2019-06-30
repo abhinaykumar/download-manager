@@ -31,7 +31,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"url\": \"http://localhost:8080/data.txt\",\n\t\"threads\": 4\n}"
+					"raw": "{\n\t\"url\": \"http://help.websiteos.com/websiteos/example_of_a_simple_html_page.htm\",\n\t\"threads\": 4\n}"
 				},
 				"url": {
 					"raw": "http://localhost:3000",
@@ -70,7 +70,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"url\": \"http://localhost:8080/random_file.txt\",\n\t\"threads\": 4\n}"
+					"raw": "{\n\t\"url\": \"http://help.websiteos.com/websiteos/example_of_a_simple_html_page.htm\",\n\t\"threads\": 4\n}"
 				},
 				"url": {
 					"raw": "http://localhost:3000",
