@@ -1,27 +1,30 @@
-## About the project
+## A download manager written in Go.
+
 ## Pre-requisites
-## Go should be installed....
+* Go v1.12 or higher
 
-<!-- To install the dependencies and run server-->
-$ bash bin/setup.sh
+## Setup
+Run bash command (mentioned below) from root of the app directory.
+$ bash bin/setup.sh <!-- Install the dependencies and run server-->
 
-###Manually setting up the project
-<!-- Installing dependencies -->
-$ go get -u github.com/gorilla/mux
+## To Manually setup the project
+$ go get -u github.com/gorilla/mux <!-- Install dependencies -->
 
-<!-- Build the project -->
-$ go build main.go
+$ go build main.go <!-- Complie the project -->
 
-<!-- Run test case -->
-$ go test -v
+$ go test -v <!-- Run test cases -->
 
-<!-- Run the go server -->
-$ ./main
+$ ./main <!-- Run the server -->
 
-# Import Postman collection
-# Where the file will be downloaded
+# Postman collection
+Postman collection is located in `/test/postman/Go_DL_MANAGER_API.postman_collection`
+Import this collection to test the Apis via Postman. It contains two POST requests.
+First with valid url and Second with invalid url.
 
-Api endpoint download('/) expects two params `url`(string) and `threads`(int).
+# Download location
+The downloaded files will be inside `go_dl_manager/downloads/` folder.
+
+Api endpoint download('/) expects two params `url` (string) and `threads` (int).
 
 Endpoint: http://localhost:3000 
 Request Method: POST

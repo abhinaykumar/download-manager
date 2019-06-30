@@ -10,7 +10,6 @@ import (
 	"time"
 
 	"./downloader"
-	"./stats"
 	"github.com/gorilla/mux"
 )
 
@@ -22,7 +21,6 @@ func main() {
 
 	router := mux.NewRouter()
 	mount(router, "/", downloader.Router())
-	mount(router, "/stats", stats.Router())
 	log.Fatal(http.ListenAndServe(":3000", RequestLogger(router)))
 }
 

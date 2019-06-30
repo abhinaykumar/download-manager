@@ -1,4 +1,0 @@
-2019/06/30 11:39:04 downloader.go:46: pid:[28813]		[::1]:62505 params: {"url":"http://help.website.com/websiteos/example_of_a_simple_html_page.htm","threads":4}
-2019/06/30 11:39:05 main.go:59: pid:[28813]		POST		/		[::1]:62505		1.103854094s
-2019/06/30 11:39:25 downloader.go:46: pid:[28813]		[::1]:62505 params: {"url":"http://help.websiteos.com/websiteos/example_of_a_simple_html_page.htm","threads":4}
-2019/06/30 11:39:27 main.go:59: pid:[28813]		POST		/		[::1]:62505		1.737481784s
