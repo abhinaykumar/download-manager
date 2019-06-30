@@ -70,7 +70,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"url\": \"http://help.websiteos.com/websiteos/example_of_a_simple_html_page.htm\",\n\t\"threads\": 4\n}"
+					"raw": "{\n\t\"url\": \"https://github.com/abhinaykumar/fake.html\",\n\t\"threads\": null\n}"
 				},
 				"url": {
 					"raw": "http://localhost:3000",

@@ -55,10 +55,7 @@ func Download(w http.ResponseWriter, r *http.Request) {
 	fileName := splitURL[len(splitURL)-1]
 
 	res, err := http.Head(resourceURL)
-	if err != nil {
-		log.Fatal(err)
-	}
-	if res.StatusCode != 200 {
+	if (err != nil) || (res.StatusCode != 200) {
 		http.Error(w, http.StatusText(http.StatusNotFound), http.StatusNotFound)
 		return
 	}
