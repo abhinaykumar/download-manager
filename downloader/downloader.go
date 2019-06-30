@@ -14,6 +14,7 @@ import (
 	"github.com/gorilla/mux"
 )
 
+// DownloadConfigs contains required attributes
 type DownloadConfigs struct {
 	URL     string `json:"url,omitempty"`
 	Threads int    `json:"threads,omitempty"`
@@ -22,6 +23,7 @@ type DownloadConfigs struct {
 var wg sync.WaitGroup
 var defaultThreadCount = 2
 
+// Router return the handler for root routes
 func Router() *mux.Router {
 	router := mux.NewRouter()
 	router.HandleFunc("/", Download).Methods("POST")
