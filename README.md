@@ -1,4 +1,5 @@
 ## A download manager written in Go.
+App allows to configure number of thread that should be used to download any type of file.
 
 ## Pre-requisites
 * Go v1.12 or higher
@@ -19,6 +20,20 @@ $ go test -v <!-- Run test cases -->
 
 $ ./main <!-- Run the server -->
 ```
+Api endpoint download('/) expects two params `url` (string) and `threads` (int).
+```
+Endpoint: http://localhost:3000 
+Request Method: POST
+Content-Type: json
+Sample request:
+{
+    "url": "https://file-examples.com/wp-content/uploads/2017/11/file_example_MP3_700KB.mp3",
+    "threads": 3
+}
+
+Sample response:
+File is downloaded from url: https://file-examples.com/wp-content/uploads/2017/11/file_example_MP3_700KB.mp3
+```
 
 ## Postman collection
 Postman collection is located in `/test/postman/Go_DL_MANAGER_API.postman_collection`
@@ -36,19 +51,4 @@ Ex:
 ```
 pid:[32045]		[::1]:62774 params: {"url":"example.com","threads":4}
 pid:[32045]		POST		/		[::1]:62774		2.499650223s
-```
-
-Api endpoint download('/) expects two params `url` (string) and `threads` (int).
-```
-Endpoint: http://localhost:3000 
-Request Method: POST
-Content-Type: json
-Sample request:
-{
-    "url": "https://file-examples.com/wp-content/uploads/2017/11/file_example_MP3_700KB.mp3",
-    "threads": 3
-}
-
-Sample response:
-File is downloaded from url: https://file-examples.com/wp-content/uploads/2017/11/file_example_MP3_700KB.mp3
 ```
