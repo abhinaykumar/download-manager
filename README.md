@@ -16,13 +16,22 @@ $ go test -v <!-- Run test cases -->
 
 $ ./main <!-- Run the server -->
 
-# Postman collection
+## Postman collection
 Postman collection is located in `/test/postman/Go_DL_MANAGER_API.postman_collection`
 Import this collection to test the Apis via Postman. It contains two POST requests.
 First with valid url and Second with invalid url.
 
-# Download location
+## Download location
 The downloaded files will be inside `go_dl_manager/downloads/` folder.
+
+## Logs
+Logs are saved in `go_dl_manager/development.log` file. It contains the informations
+like process ID(to differentiate between calls), IP address, params, request method
+and time taken by server to process the incoming request.
+Ex:
+pid:[32045]		[::1]:62774 params: {"url":"example.com","threads":4}
+pid:[32045]		POST		/		[::1]:62774		2.499650223s
+
 
 Api endpoint download('/) expects two params `url` (string) and `threads` (int).
 
